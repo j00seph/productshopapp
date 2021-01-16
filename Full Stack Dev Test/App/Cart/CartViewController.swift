@@ -21,6 +21,7 @@ class CartViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.register(UINib(nibName: "CartCell", bundle: nil), forCellReuseIdentifier: "CartCell")
+            tableView.register(UINib(nibName: "BuyCell", bundle: nil), forCellReuseIdentifier: "BuyCell")
         }
     }
     
@@ -36,6 +37,11 @@ class CartViewController: UIViewController{
         delegate?.didTapBack(cart)
         self.navigationController?.popViewController(animated: false)
     }
+    
+    func getTotal() -> Float {
+        let total =  cart.map({ Float($0.price)! }).reduce(0.0) { $0 + $1 }
+        return total
+    }
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource{
@@ -45,10 +51,18 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cart.count
+        return cart.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == cart.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BuyCell", for: indexPath) as! BuyCell
+            cell.totalLabel.text = "$\(getTotal())"
+            cell.buyButton.onTapView = { [weak self] in
+                self?.performSegue(withIdentifier: "ShowCheckoutSegue", sender: nil)
+            }
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartCell
         cell.data = cart[indexPath.row]
         cell.onTapDelete = { [weak self] in

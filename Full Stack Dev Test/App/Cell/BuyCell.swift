@@ -5,4 +5,10 @@
 //  Created by Joseph on 1/16/21.
 //
 
-import Foundation
+import UIKit
+
+class BuyCell: UITableViewCell{
+    
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var buyButton: UIViewDesignable!
+}
