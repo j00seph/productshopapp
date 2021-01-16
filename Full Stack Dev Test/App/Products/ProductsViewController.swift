@@ -16,6 +16,7 @@ class ProductsViewController: UIViewController {
         super.viewWillAppear(animated)
         productList = loadProducts()
         filterList = loadFilters()
+        selectedProducts = []
     }
 
     @IBOutlet weak var collectionView: UICollectionView!{
