@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ProductCodables: Codable {
+struct Product: Codable {
     let id, name, category, price: String
     let bgColor: String
 }

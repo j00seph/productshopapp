@@ -130,6 +130,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Vt-f0-ZH9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="tZq-CK-esh" id="7Gg-dh-AaP"/>
+                        <outlet property="tableView" destination="zV0-dU-h8W" id="uwU-ws-oHj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
