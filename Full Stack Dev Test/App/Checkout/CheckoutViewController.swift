@@ -13,6 +13,7 @@ class CheckoutViewController: UIViewController{
     @IBOutlet weak var cartLabel: UILabel!
     var cart: [Product] = []
     
+    @IBOutlet weak var switchView: UIView!
     @IBOutlet weak var thumbCenter: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -24,6 +25,7 @@ class CheckoutViewController: UIViewController{
         if !isSwitchEnabled {
             return
         }
+        writeJsonFile()
         performSegue(withIdentifier: "ShowConfirmationSegue", sender: nil)
     }
     
@@ -35,11 +37,25 @@ class CheckoutViewController: UIViewController{
     
     var isSwitchEnabled = false {
         didSet{
+            switchView.backgroundColor = isSwitchEnabled ? #colorLiteral(red: 1, green: 0.7275989056, blue: 0, alpha: 1) : #colorLiteral(red: 0.9153900146, green: 0.905616343, blue: 0.9955919385, alpha: 1)
             NSLayoutConstraint.setMultiplier(isSwitchEnabled ? 1.4 : 0.6, of: &thumbCenter)
         }
     }
     
     @IBAction func didTapSwitch(_ sender: UIButton) {
         isSwitchEnabled.toggle()
+    }
+    
+    private func writeJsonFile(){
+        if let encodedData = try? JSONEncoder().encode(cart) {
+            let path = "/path/to/order_\(UUID().uuidString).json"
+            let pathAsURL = URL(fileURLWithPath: path)
+            do {
+                try encodedData.write(to: pathAsURL)
+            }
+            catch {
+                print("Failed to write JSON data: \(error.localizedDescription)")
+            }
+        }
     }
 }
