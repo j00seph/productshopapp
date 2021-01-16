@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="buO-J7-WHc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,34 +17,34 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Checkout View Controller-->
         <scene sceneID="pR2-QF-MqK">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="buO-J7-WHc" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="buO-J7-WHc" customClass="CheckoutViewController" customModule="Full_Stack_Dev_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JaC-jd-LhT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-vT-I0q">
-                                <rect key="frame" x="20" y="56.5" width="47" height="21"/>
+                                <rect key="frame" x="20" y="57" width="47" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-Lo-Vxw">
-                                <rect key="frame" x="20" y="102" width="139.5" height="33"/>
+                                <rect key="frame" x="20" y="102" width="139.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="fQJ-8p-hNj">
-                                <rect key="frame" x="20" y="155" width="69" height="15"/>
+                                <rect key="frame" x="20" y="153.5" width="69" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="KeC-zL-wGd">
-                                <rect key="frame" x="20" y="256" width="68" height="15"/>
+                                <rect key="frame" x="20" y="253.5" width="68" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-OU-UaA">
-                                        <rect key="frame" x="0.0" y="7" width="32" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="7.5" width="32" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="at3-8K-PFp" customClass="UIViewDesignable" customModule="Full_Stack_Dev_Test" customModuleProvider="target">
-                                <rect key="frame" x="20" y="281" width="374" height="56"/>
+                                <rect key="frame" x="20" y="277.5" width="374" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g jane@company.co" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-9n-cOx">
                                         <rect key="frame" x="16" y="0.0" width="342" height="56"/>
@@ -127,7 +127,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZD-5w-nEf" customClass="UIViewDesignable" customModule="Full_Stack_Dev_Test" customModuleProvider="target">
-                                <rect key="frame" x="20" y="180" width="374" height="56"/>
+                                <rect key="frame" x="20" y="177.5" width="374" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g Jane Doe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LcP-si-yB3">
                                         <rect key="frame" x="16" y="0.0" width="342" height="56"/>
@@ -161,7 +161,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-Gh-FND" customClass="UIViewDesignable" customModule="Full_Stack_Dev_Test" customModuleProvider="target">
-                                <rect key="frame" x="20" y="372" width="60" height="36"/>
+                                <rect key="frame" x="20" y="368.5" width="60" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-switch-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="oyR-Ph-5KH">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
@@ -190,7 +190,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qb8-8w-jdI" customClass="UIButtonDesignable" customModule="Full_Stack_Dev_Test" customModuleProvider="target">
-                                <rect key="frame" x="20" y="452" width="374" height="56"/>
+                                <rect key="frame" x="20" y="448.5" width="374" height="56"/>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.27843137254901962" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Tfa-xe-Ga1"/>
@@ -213,10 +213,20 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAnimatedWhenTouched" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapPay:" destination="buO-J7-WHc" eventType="touchUpInside" id="7Vj-jB-Zep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-CF-gyj">
+                                <rect key="frame" x="20" y="368.5" width="60" height="36"/>
+                                <connections>
+                                    <action selector="didTapSwitch:" destination="buO-J7-WHc" eventType="touchUpInside" id="PRO-iB-Z88"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the terms and conditions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="iox-Vr-jha">
-                                <rect key="frame" x="100" y="382.5" width="294" height="15"/>
+                                <rect key="frame" x="100" y="379.5" width="294" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -225,6 +235,7 @@
                         <viewLayoutGuide key="safeArea" id="Eic-KT-wYE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="k7x-CF-gyj" firstAttribute="top" secondItem="CAu-Gh-FND" secondAttribute="top" id="1AE-ps-57h"/>
                             <constraint firstItem="Oti-yZ-675" firstAttribute="centerX" secondItem="ftO-2j-smh" secondAttribute="centerX" multiplier="1.045" id="37T-1x-VU1"/>
                             <constraint firstItem="qZD-5w-nEf" firstAttribute="leading" secondItem="Eic-KT-wYE" secondAttribute="leading" constant="20" id="7pG-Xa-KJd"/>
                             <constraint firstItem="eVd-vT-I0q" firstAttribute="centerY" secondItem="ftO-2j-smh" secondAttribute="centerY" id="8bO-QW-ehS"/>
@@ -253,8 +264,11 @@
                             <constraint firstItem="QEB-Lo-Vxw" firstAttribute="leading" secondItem="Eic-KT-wYE" secondAttribute="leading" constant="20" id="idE-4n-JPh"/>
                             <constraint firstItem="eVd-vT-I0q" firstAttribute="leading" secondItem="Eic-KT-wYE" secondAttribute="leading" constant="20" id="kV5-jz-wcj"/>
                             <constraint firstItem="QEB-Lo-Vxw" firstAttribute="width" secondItem="JaC-jd-LhT" secondAttribute="width" multiplier="0.336957" id="m43-QJ-xUg"/>
+                            <constraint firstItem="k7x-CF-gyj" firstAttribute="bottom" secondItem="CAu-Gh-FND" secondAttribute="bottom" id="oXH-19-Sdu"/>
                             <constraint firstItem="iox-Vr-jha" firstAttribute="centerY" secondItem="CAu-Gh-FND" secondAttribute="centerY" id="oos-B8-lAj"/>
+                            <constraint firstItem="k7x-CF-gyj" firstAttribute="trailing" secondItem="CAu-Gh-FND" secondAttribute="trailing" id="sbM-Es-hwm"/>
                             <constraint firstItem="Eic-KT-wYE" firstAttribute="trailing" secondItem="qb8-8w-jdI" secondAttribute="trailing" constant="20" id="tbC-l5-bUA"/>
+                            <constraint firstItem="k7x-CF-gyj" firstAttribute="leading" secondItem="CAu-Gh-FND" secondAttribute="leading" id="u7b-Pn-wfT"/>
                             <constraint firstItem="at3-8K-PFp" firstAttribute="leading" secondItem="Eic-KT-wYE" secondAttribute="leading" constant="20" id="wYB-bx-Mf0"/>
                             <constraint firstItem="QEB-Lo-Vxw" firstAttribute="top" secondItem="IAP-C3-yDg" secondAttribute="bottom" constant="10" id="xgH-CX-Qgs"/>
                             <constraint firstItem="IAP-C3-yDg" firstAttribute="top" secondItem="ftO-2j-smh" secondAttribute="bottom" id="xv1-99-TzF"/>
@@ -264,6 +278,9 @@
                     <connections>
                         <outlet property="badgeView" destination="Oti-yZ-675" id="ZzX-fv-cwd"/>
                         <outlet property="cartLabel" destination="Edh-OU-UaA" id="KgG-oa-d3j"/>
+                        <outlet property="emailTextField" destination="MUk-9n-cOx" id="8KU-cV-Sa0"/>
+                        <outlet property="nameTextField" destination="LcP-si-yB3" id="XNe-ED-80d"/>
+                        <outlet property="thumbCenter" destination="IPh-9w-lde" id="uZV-fr-jfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADN-R7-sGJ" sceneMemberID="firstResponder"/>
@@ -273,7 +290,7 @@
     </scenes>
     <designables>
         <designable name="qb8-8w-jdI">
-            <size key="intrinsicContentSize" width="84" height="33"/>
+            <size key="intrinsicContentSize" width="72" height="32"/>
         </designable>
     </designables>
     <resources>

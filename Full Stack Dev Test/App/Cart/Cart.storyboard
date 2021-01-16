@@ -116,11 +116,22 @@
                         <outlet property="badgeView" destination="yL3-kQ-TY6" id="NbT-Dh-0ac"/>
                         <outlet property="cartLabel" destination="UV2-vW-eKO" id="Vx3-US-vbd"/>
                         <outlet property="tableView" destination="4ox-4V-5C8" id="ec9-Wu-0wg"/>
+                        <segue destination="eKQ-gn-4LS" kind="show" identifier="ShowCheckoutSegue" animates="NO" id="5VR-Fl-THb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2id-yK-do6" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88" y="-78"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="QD5-Tu-UGy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Checkout" id="eKQ-gn-4LS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hQP-gO-tUD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ac-tC-Vn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="-78"/>
         </scene>
     </scenes>
     <resources>

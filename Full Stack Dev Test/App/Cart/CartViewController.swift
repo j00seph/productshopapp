@@ -42,6 +42,18 @@ class CartViewController: UIViewController{
         let total =  cart.map({ Float($0.price)! }).reduce(0.0) { $0 + $1 }
         return total
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ShowCheckoutSegue":
+            if let vc = segue.destination as? CheckoutViewController{
+                vc.cart = cart
+            }
+            return
+        default:
+            return
+        }
+    }
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource{
@@ -51,11 +63,11 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cart.count + 1
+        return cart.isEmpty ? 0 : cart.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == cart.count {
+        if indexPath.row == cart.count && !cart.isEmpty{
             let cell = tableView.dequeueReusableCell(withIdentifier: "BuyCell", for: indexPath) as! BuyCell
             cell.totalLabel.text = "$\(getTotal())"
             cell.buyButton.onTapView = { [weak self] in

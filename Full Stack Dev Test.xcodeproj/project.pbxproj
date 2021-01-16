@@ -48,6 +48,8 @@
 		7C8F70D625B2D38200D39C7F /* BuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F70D525B2D38200D39C7F /* BuyCell.xib */; };
 		7CDD949A25B2D59C00869CFD /* BuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD949925B2D59C00869CFD /* BuyCell.swift */; };
 		7CDD949D25B2D9FA00869CFD /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */; };
+		7CDD94A025B2DD5800869CFD /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD949F25B2DD5800869CFD /* CheckoutViewController.swift */; };
+		7CDD94A325B2DDD600869CFD /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD94A225B2DDD600869CFD /* NSLayoutConstraint+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		7C8F70D525B2D38200D39C7F /* BuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCell.xib; sourceTree = "<group>"; };
 		7CDD949925B2D59C00869CFD /* BuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCell.swift; sourceTree = "<group>"; };
 		7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
+		7CDD949F25B2DD5800869CFD /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		7CDD94A225B2DDD600869CFD /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */,
+				7CDD949F25B2DD5800869CFD /* CheckoutViewController.swift */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		7C8F70B025B290CB00D39C7F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7CDD94A225B2DDD600869CFD /* NSLayoutConstraint+.swift */,
 				7C8F70B125B290D700D39C7F /* UIColor+.swift */,
 			);
 			path = Extension;
@@ -357,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C8F70AE25B2900C00D39C7F /* UIViewDesignable.swift in Sources */,
+				7CDD94A025B2DD5800869CFD /* CheckoutViewController.swift in Sources */,
 				7C8F70D025B2CBC400D39C7F /* CartCell.swift in Sources */,
 				7C8F70C625B2C49200D39C7F /* AddAlertView.swift in Sources */,
 				7C8F70B525B2927200D39C7F /* FilterCell.swift in Sources */,
@@ -366,6 +373,7 @@
 				7C8F70D325B2CBFE00D39C7F /* CartViewController.swift in Sources */,
 				7CDD949A25B2D59C00869CFD /* BuyCell.swift in Sources */,
 				7C8F70BE25B2980300D39C7F /* ProductCell.swift in Sources */,
+				7CDD94A325B2DDD600869CFD /* NSLayoutConstraint+.swift in Sources */,
 				7C8F705725B2856500D39C7F /* AppDelegate.swift in Sources */,
 				7C8F70B225B290D700D39C7F /* UIColor+.swift in Sources */,
 			);
