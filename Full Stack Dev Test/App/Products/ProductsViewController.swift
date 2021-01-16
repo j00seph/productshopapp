@@ -50,6 +50,7 @@ class ProductsViewController: UIViewController {
     
     var selectedProducts: [Product] = []{
         didSet{
+            selectedProducts = Array(Set(selectedProducts))
             badgeView.isHidden = selectedProducts.isEmpty ? true : false
             cartLabel.text = "\(selectedProducts.count)"
         }
@@ -86,6 +87,12 @@ class ProductsViewController: UIViewController {
             return
         }
     }
+    
+    private lazy var addAlertView: AddAlertView = {
+        let addAlertView = AddAlertView.instanceFromNib()
+        addAlertView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 130, width: UIScreen.main.bounds.size.width, height: 130)
+        return addAlertView
+    }()
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -124,6 +131,9 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource{
         cell.data = filteredProductList[indexPath.row]
         cell.addButton.onTapView = { [weak self] in
             self?.selectedProducts.append((self?.filteredProductList[indexPath.row])!)
+            guard let alert = self?.addAlertView else { return }
+            alert.product = self?.filteredProductList[indexPath.row].name ?? ""
+            self?.view.addSubview(alert)
         }
         return cell
     }

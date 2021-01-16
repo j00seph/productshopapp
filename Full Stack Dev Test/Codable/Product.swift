@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Product: Codable {
+struct Product: Codable, Hashable {
     let id, name, category, price: String
     let bgColor: String
 }
