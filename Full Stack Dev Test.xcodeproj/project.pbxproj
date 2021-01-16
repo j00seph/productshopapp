@@ -50,6 +50,7 @@
 		7CDD949D25B2D9FA00869CFD /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */; };
 		7CDD94A025B2DD5800869CFD /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD949F25B2DD5800869CFD /* CheckoutViewController.swift */; };
 		7CDD94A325B2DDD600869CFD /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD94A225B2DDD600869CFD /* NSLayoutConstraint+.swift */; };
+		7CDD94A725B2E6A700869CFD /* Confirmation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD94A625B2E6A700869CFD /* Confirmation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		7CDD949F25B2DD5800869CFD /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		7CDD94A225B2DDD600869CFD /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
+		7CDD94A625B2E6A700869CFD /* Confirmation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Confirmation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				7C8F707125B285D200D39C7F /* Products */,
 				7C8F707225B285EE00D39C7F /* Cart */,
 				7C8F707325B285FE00D39C7F /* Checkout */,
+				7CDD94A525B2E69700869CFD /* Confirmation */,
 				7C8F70A125B28E5800D39C7F /* Cell */,
 			);
 			path = App;
@@ -266,6 +269,14 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		7CDD94A525B2E69700869CFD /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				7CDD94A625B2E6A700869CFD /* Confirmation.storyboard */,
+			);
+			path = Confirmation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +355,7 @@
 				7C8F706025B2856600D39C7F /* Assets.xcassets in Resources */,
 				7C8F709725B2863800D39C7F /* Montserrat-ThinItalic.ttf in Resources */,
 				7C8F70D625B2D38200D39C7F /* BuyCell.xib in Resources */,
+				7CDD94A725B2E6A700869CFD /* Confirmation.storyboard in Resources */,
 				7C8F708F25B2863800D39C7F /* Montserrat-LightItalic.ttf in Resources */,
 				7C8F708B25B2863800D39C7F /* Montserrat-Thin.ttf in Resources */,
 				7C8F709425B2863800D39C7F /* Montserrat-ExtraLightItalic.ttf in Resources */,
