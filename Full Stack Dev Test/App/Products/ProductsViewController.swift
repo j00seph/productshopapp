@@ -31,6 +31,10 @@ class ProductsViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapCart(_ sender: UIButton) {
+        if selectedProducts.isEmpty { return }
+        performSegue(withIdentifier: "ShowCartSegue", sender: nil)
+    }
     
     var filterList: [(category: String, isEnabled: Bool)] = []{
         didSet{
@@ -93,6 +97,19 @@ class ProductsViewController: UIViewController {
         addAlertView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 130, width: UIScreen.main.bounds.size.width, height: 130)
         return addAlertView
     }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ShowCartSegue":
+            if let vc = segue.destination as? CartViewController{
+                vc.cart = selectedProducts
+                vc.delegate = self
+            }
+            return
+        default:
+            return
+        }
+    }
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -136,6 +153,13 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource{
             self?.view.addSubview(alert)
         }
         return cell
+    }
+    
+}
+
+extension ProductsViewController: CartViewControllerDelegate{
+    func didTapBack(_ cart: [Product]) {
+        selectedProducts = cart
     }
     
 }
