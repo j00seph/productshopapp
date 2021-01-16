@@ -25,6 +25,7 @@ class CartViewController: UIViewController{
     }
     
     var cart: [Product] = []
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         badgeView.isHidden = cart.isEmpty ? true : false
@@ -52,6 +53,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource{
         cell.data = cart[indexPath.row]
         cell.onTapDelete = { [weak self] in
             self?.cart.remove(at: indexPath.row)
+            self?.cartLabel.text = "\(self?.cart.count ?? 1)"
+            self?.badgeView.isHidden = (self?.cart.count ?? 0) == 0 ? true : false
             self?.tableView.reloadData()
         }
         return cell

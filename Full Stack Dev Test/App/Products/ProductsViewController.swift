@@ -16,6 +16,10 @@ class ProductsViewController: UIViewController {
         super.viewWillAppear(animated)
         productList = loadProducts()
         filterList = loadFilters()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         selectedProducts = []
     }
 

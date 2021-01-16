@@ -45,6 +45,8 @@
 		7C8F70CD25B2CABC00D39C7F /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F70CC25B2CABC00D39C7F /* CartCell.xib */; };
 		7C8F70D025B2CBC400D39C7F /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F70CF25B2CBC400D39C7F /* CartCell.swift */; };
 		7C8F70D325B2CBFE00D39C7F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F70D225B2CBFE00D39C7F /* CartViewController.swift */; };
+		7C8F70D625B2D38200D39C7F /* BuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F70D525B2D38200D39C7F /* BuyCell.xib */; };
+		7CDD949A25B2D59C00869CFD /* BuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD949925B2D59C00869CFD /* BuyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		7C8F70CC25B2CABC00D39C7F /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
 		7C8F70CF25B2CBC400D39C7F /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		7C8F70D225B2CBFE00D39C7F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		7C8F70D525B2D38200D39C7F /* BuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCell.xib; sourceTree = "<group>"; };
+		7CDD949925B2D59C00869CFD /* BuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 				7C8F70BD25B2980300D39C7F /* ProductCell.swift */,
 				7C8F70CC25B2CABC00D39C7F /* CartCell.xib */,
 				7C8F70CF25B2CBC400D39C7F /* CartCell.swift */,
+				7C8F70D525B2D38200D39C7F /* BuyCell.xib */,
+				7CDD949925B2D59C00869CFD /* BuyCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				7C8F709625B2863800D39C7F /* Montserrat-Black.ttf in Resources */,
 				7C8F706025B2856600D39C7F /* Assets.xcassets in Resources */,
 				7C8F709725B2863800D39C7F /* Montserrat-ThinItalic.ttf in Resources */,
+				7C8F70D625B2D38200D39C7F /* BuyCell.xib in Resources */,
 				7C8F708F25B2863800D39C7F /* Montserrat-LightItalic.ttf in Resources */,
 				7C8F708B25B2863800D39C7F /* Montserrat-Thin.ttf in Resources */,
 				7C8F709425B2863800D39C7F /* Montserrat-ExtraLightItalic.ttf in Resources */,
@@ -353,6 +360,7 @@
 				7C8F705B25B2856500D39C7F /* ProductsViewController.swift in Sources */,
 				7C8F70A525B28F0F00D39C7F /* Product.swift in Sources */,
 				7C8F70D325B2CBFE00D39C7F /* CartViewController.swift in Sources */,
+				7CDD949A25B2D59C00869CFD /* BuyCell.swift in Sources */,
 				7C8F70BE25B2980300D39C7F /* ProductCell.swift in Sources */,
 				7C8F705725B2856500D39C7F /* AppDelegate.swift in Sources */,
 				7C8F70B225B290D700D39C7F /* UIColor+.swift in Sources */,
