@@ -161,6 +161,14 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addButton" destination="9iT-7p-hMr" id="29g-fx-RfC"/>
+                <outlet property="categoryLabel" destination="zCi-F5-aWi" id="F4Q-44-J8K"/>
+                <outlet property="containerView" destination="f1q-C8-2LX" id="l0N-o1-1d2"/>
+                <outlet property="nameLabel" destination="YuW-Qb-RFI" id="NlJ-iV-ZBw"/>
+                <outlet property="priceLabel" destination="gdy-dc-e4q" id="po3-i1-vO6"/>
+                <outlet property="productImage" destination="CR6-T8-iIo" id="gAD-KE-SUF"/>
+            </connections>
             <point key="canvasLocation" x="-203" y="-66"/>
         </tableViewCell>
     </objects>
