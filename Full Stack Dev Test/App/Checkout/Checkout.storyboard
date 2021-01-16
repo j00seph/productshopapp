@@ -281,11 +281,22 @@
                         <outlet property="payButton" destination="qb8-8w-jdI" id="LHF-ND-sEt"/>
                         <outlet property="switchView" destination="CAu-Gh-FND" id="atG-bN-fKd"/>
                         <outlet property="thumbCenter" destination="IPh-9w-lde" id="uZV-fr-jfC"/>
+                        <segue destination="pmn-qg-l8q" kind="show" identifier="ShowConfirmationSegue" animates="NO" id="bM5-ea-eko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADN-R7-sGJ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88" y="-78"/>
+        </scene>
+        <!--Confirmation-->
+        <scene sceneID="u7q-sK-IVC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Confirmation" id="pmn-qg-l8q" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="D7k-G1-TyE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDr-ku-PiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-119"/>
         </scene>
     </scenes>
     <designables>

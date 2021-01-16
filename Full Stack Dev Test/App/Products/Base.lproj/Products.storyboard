@@ -148,7 +148,7 @@
         <!--Navigation Controller-->
         <scene sceneID="AFd-oc-aEO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7ye-g3-cdu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Products" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7ye-g3-cdu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ANX-YG-L5p">
                         <autoresizingMask key="autoresizingMask"/>

@@ -14,10 +14,14 @@ class ConfirmationViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        orderIdLabel.text = "#\(orderId)"
+        orderIdLabel.text = "Your order ID is #\(orderId)"
     }
     @IBOutlet weak var orderIdLabel: UILabel!
+    
     @IBAction func didTapReturn(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: false)
+        let mainStoryBoard = UIStoryboard(name: "Products", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "Products") as! UINavigationController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = viewController
     }
 }

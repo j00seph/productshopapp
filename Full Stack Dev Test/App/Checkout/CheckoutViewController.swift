@@ -59,16 +59,19 @@ class CheckoutViewController: UIViewController{
     }
     
     private func writeJsonFile(_ orderId: String){
-        if let encodedData = try? JSONEncoder().encode(cart) {
-            let path = "/path/to/\(orderId).json"
-            let pathAsURL = URL(fileURLWithPath: path)
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let path = documents.appendingPathComponent("\(orderId).json")
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        if let encodedData = try? encoder.encode(cart) {
             do {
-                try encodedData.write(to: pathAsURL)
+                try encodedData.write(to: path)
             }
             catch {
                 print("Failed to write JSON data: \(error.localizedDescription)")
             }
         }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
