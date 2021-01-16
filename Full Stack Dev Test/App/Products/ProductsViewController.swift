@@ -9,6 +9,8 @@ import UIKit
 
 class ProductsViewController: UIViewController {
 
+    @IBOutlet weak var badgeView: UIView!
+    @IBOutlet weak var cartLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +31,29 @@ class ProductsViewController: UIViewController {
     }
     
     
+    var filterList: [(category: String, isEnabled: Bool)] = []{
+        didSet{
+            setupFilteredProduct()
+            collectionView.reloadData()
+            filterList[0].isEnabled = filterList.filter({ $0.category != "All" && $0.isEnabled }).isEmpty
+        }
+    }
+    
+    var productList: [Product] = []
+        
+    var filteredProductList: [Product] = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
+    var selectedProducts: [Product] = []{
+        didSet{
+            badgeView.isHidden = selectedProducts.isEmpty ? true : false
+            cartLabel.text = "\(selectedProducts.count)"
+        }
+    }
+    
     func loadProducts() -> [Product]{
         var jsonData: [Product] = []
         guard let filePath = Bundle.main.path(forResource: "products", ofType: "json") else { return [] }
@@ -44,25 +69,22 @@ class ProductsViewController: UIViewController {
     
     func loadFilters() -> [(category: String, isEnabled: Bool)]{
         var tempFilter: [(category: String, isEnabled: Bool)] = []
-        let categoryList: [String] = Array(Set(productList.map{ $0.category }))
+        let categoryList: [String] = Array(Set(productList.map{ $0.category })).sorted(by: { $0 > $1 })
         tempFilter.append(("All", true))
         categoryList.forEach{ tempFilter.append(($0, false)) }
         return tempFilter
     }
     
-    var filterList: [(category: String, isEnabled: Bool)] = []{
-        didSet{
-            collectionView.reloadData()
+    private func setupFilteredProduct(){
+        if filterList.filter({ $0.category != "All" && $0.isEnabled }).isEmpty{ // no selected filters
+            filteredProductList = productList
+            return
+        }else{
+            let categoryList = filterList.filter({ $0.category != "All" && $0.isEnabled }).map{ $0.category }
+            filteredProductList = productList.filter({ categoryList.contains($0.category) })
+            return
         }
     }
-    
-    var productList: [Product] = []{
-        didSet{
-            tableView.reloadData()
-        }
-    }
-    
-    var selectedProducts: [Product] = []
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -72,10 +94,17 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCell", for: indexPath) as! FilterCell
-        cell.filterLabel.text = filterList[indexPath.row].category
+        cell.data = filterList[indexPath.row]
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            filterList = loadFilters()
+            return
+        }
+        filterList[indexPath.row].isEnabled.toggle()
+    }
     
 }
 
@@ -86,17 +115,16 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productList.count
+        return filteredProductList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
-        cell.data = productList[indexPath.row]
+        cell.data = filteredProductList[indexPath.row]
         cell.addButton.onTapView = { [weak self] in
-            self?.selectedProducts.append((self?.productList[indexPath.row])!)
+            self?.selectedProducts.append((self?.filteredProductList[indexPath.row])!)
         }
         return cell
     }
-    
     
 }
