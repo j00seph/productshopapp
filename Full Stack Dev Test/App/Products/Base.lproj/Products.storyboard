@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ye-g3-cdu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-ExtraBold.ttf">
+            <string>Montserrat-ExtraBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Products View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ProductsViewController" customModule="Full_Stack_Dev_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="kU2-yr-Drh">
+                                <rect key="frame" x="20" y="56.5" width="47" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXa-Nr-gTG">
+                                <rect key="frame" x="348" y="44" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="TJD-7z-tpe"/>
+                                    <constraint firstAttribute="width" constant="46" id="mxf-yg-FQ9"/>
+                                </constraints>
+                                <state key="normal" image="icon-cart"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vo-SZ-L5M">
+                                <rect key="frame" x="0.0" y="90" width="414" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="u4h-9i-JWG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="fHL-6O-vN6">
+                                <rect key="frame" x="20" y="102" width="131" height="33"/>
+                                <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fHL-6O-vN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6tZ-87-9K0"/>
+                            <constraint firstItem="4Vo-SZ-L5M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K39-Yy-h3y"/>
+                            <constraint firstAttribute="trailing" secondItem="4Vo-SZ-L5M" secondAttribute="trailing" id="TAl-aM-wGQ"/>
+                            <constraint firstItem="kU2-yr-Drh" firstAttribute="centerY" secondItem="NXa-Nr-gTG" secondAttribute="centerY" id="ZmH-i9-Kkq"/>
+                            <constraint firstItem="fHL-6O-vN6" firstAttribute="top" secondItem="4Vo-SZ-L5M" secondAttribute="bottom" constant="10" id="aTS-oQ-LUg"/>
+                            <constraint firstItem="kU2-yr-Drh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f5L-Ze-nx6"/>
+                            <constraint firstItem="4Vo-SZ-L5M" firstAttribute="top" secondItem="NXa-Nr-gTG" secondAttribute="bottom" id="h6B-aX-hwa"/>
+                            <constraint firstItem="kU2-yr-Drh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.113527" id="lxI-rM-poI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NXa-Nr-gTG" secondAttribute="trailing" constant="20" id="pt5-jh-Y0G"/>
+                            <constraint firstItem="NXa-Nr-gTG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qxX-km-s2F"/>
+                            <constraint firstItem="fHL-6O-vN6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.316425" id="whl-uQ-rrP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Vt-f0-ZH9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623.1884057971015" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AFd-oc-aEO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7ye-g3-cdu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ANX-YG-L5p">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZGp-eN-ulY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nA-g9-r21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1533.3333333333335" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-cart" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
