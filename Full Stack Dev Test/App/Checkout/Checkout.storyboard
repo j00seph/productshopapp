@@ -278,6 +278,7 @@
                         <outlet property="cartLabel" destination="Edh-OU-UaA" id="KgG-oa-d3j"/>
                         <outlet property="emailTextField" destination="MUk-9n-cOx" id="8KU-cV-Sa0"/>
                         <outlet property="nameTextField" destination="LcP-si-yB3" id="XNe-ED-80d"/>
+                        <outlet property="payButton" destination="qb8-8w-jdI" id="LHF-ND-sEt"/>
                         <outlet property="switchView" destination="CAu-Gh-FND" id="atG-bN-fKd"/>
                         <outlet property="thumbCenter" destination="IPh-9w-lde" id="uZV-fr-jfC"/>
                     </connections>

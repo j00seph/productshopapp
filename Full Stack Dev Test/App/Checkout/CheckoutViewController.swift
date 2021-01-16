@@ -13,11 +13,12 @@ class CheckoutViewController: UIViewController{
     @IBOutlet weak var cartLabel: UILabel!
     var cart: [Product] = []
     
+    @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var switchView: UIView!
     @IBOutlet weak var thumbCenter: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
+    var orderId = ""
     @IBAction func didTapPay(_ sender: UIButton) {
         guard nameTextField.text! != "", emailTextField.text! != "" else {
             return
@@ -25,7 +26,8 @@ class CheckoutViewController: UIViewController{
         if !isSwitchEnabled {
             return
         }
-        writeJsonFile()
+        orderId = "order_\(getTimestamp())"
+        writeJsonFile(orderId)
         performSegue(withIdentifier: "ShowConfirmationSegue", sender: nil)
     }
     
@@ -33,6 +35,8 @@ class CheckoutViewController: UIViewController{
         super.viewWillAppear(animated)
         badgeView.isHidden = cart.isEmpty ? true : false
         cartLabel.text = "\(cart.count)"
+        let total = cart.map({ Float($0.price)! }).reduce(0.0) { $0 + $1 }
+        payButton.setTitle("Pay $\(total)", for: .normal)
     }
     
     var isSwitchEnabled = false {
@@ -46,9 +50,17 @@ class CheckoutViewController: UIViewController{
         isSwitchEnabled.toggle()
     }
     
-    private func writeJsonFile(){
+    private func getTimestamp() -> String{
+        let d = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMddHmssSSSS"
+
+        return df.string(from: d)
+    }
+    
+    private func writeJsonFile(_ orderId: String){
         if let encodedData = try? JSONEncoder().encode(cart) {
-            let path = "/path/to/order_\(UUID().uuidString).json"
+            let path = "/path/to/\(orderId).json"
             let pathAsURL = URL(fileURLWithPath: path)
             do {
                 try encodedData.write(to: pathAsURL)
@@ -56,6 +68,18 @@ class CheckoutViewController: UIViewController{
             catch {
                 print("Failed to write JSON data: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ShowConfirmationSegue":
+            if let vc = segue.destination as? ConfirmationViewController{
+                vc.orderId = orderId
+            }
+            return
+        default:
+            return
         }
     }
 }
