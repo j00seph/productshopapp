@@ -47,6 +47,7 @@
 		7C8F70D325B2CBFE00D39C7F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F70D225B2CBFE00D39C7F /* CartViewController.swift */; };
 		7C8F70D625B2D38200D39C7F /* BuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F70D525B2D38200D39C7F /* BuyCell.xib */; };
 		7CDD949A25B2D59C00869CFD /* BuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD949925B2D59C00869CFD /* BuyCell.swift */; };
+		7CDD949D25B2D9FA00869CFD /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		7C8F70D225B2CBFE00D39C7F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		7C8F70D525B2D38200D39C7F /* BuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyCell.xib; sourceTree = "<group>"; };
 		7CDD949925B2D59C00869CFD /* BuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCell.swift; sourceTree = "<group>"; };
+		7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +126,9 @@
 		7C8F705525B2856500D39C7F /* Full Stack Dev Test */ = {
 			isa = PBXGroup;
 			children = (
+				7C8F706C25B2858E00D39C7F /* App */,
 				7C8F70B025B290CB00D39C7F /* Extension */,
 				7C8F70AC25B28FDD00D39C7F /* Designable */,
-				7C8F706C25B2858E00D39C7F /* App */,
 				7C8F70A325B28EFF00D39C7F /* Codable */,
 				7C8F709C25B287EB00D39C7F /* Json */,
 				7C8F707425B2861B00D39C7F /* Fonts */,
@@ -141,10 +143,10 @@
 		7C8F706C25B2858E00D39C7F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				7C8F70A125B28E5800D39C7F /* Cell */,
 				7C8F707125B285D200D39C7F /* Products */,
 				7C8F707225B285EE00D39C7F /* Cart */,
 				7C8F707325B285FE00D39C7F /* Checkout */,
+				7C8F70A125B28E5800D39C7F /* Cell */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 		7C8F707325B285FE00D39C7F /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				7CDD949C25B2D9FA00869CFD /* Checkout.storyboard */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				7C8F708B25B2863800D39C7F /* Montserrat-Thin.ttf in Resources */,
 				7C8F709425B2863800D39C7F /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				7C8F709E25B287FA00D39C7F /* products.json in Resources */,
+				7CDD949D25B2D9FA00869CFD /* Checkout.storyboard in Resources */,
 				7C8F705E25B2856500D39C7F /* Products.storyboard in Resources */,
 				7C8F708D25B2863800D39C7F /* Montserrat-ExtraLight.ttf in Resources */,
 				7C8F70AA25B28FAC00D39C7F /* FilterCell.xib in Resources */,
